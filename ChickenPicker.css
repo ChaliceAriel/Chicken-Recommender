@@ -1,0 +1,254 @@
+/*GENERAL PAGE STYLES*/
+
+.tan-header-page-wrapper {
+    padding-bottom: 0;
+}    
+.tan-page-title {
+    display: none;
+}
+.basic-page-body {
+    background-color: white;
+    padding: 0;
+}
+#pageWrapper {
+    max-width: 932px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    height: max-content;
+}
+#filtersHeader {
+    width: 100%;
+    height: 300px;
+    background-color: #e2ffdb;
+}
+#filtersInstructions {
+    width: 89%;
+    margin: 0 auto;
+    padding: 5% 0 2.5%;
+    font-family: 'Trade Gothic W01 Roman', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
+    font-size: 17px;
+    text-transform: none;
+}
+#filtersBox {
+    width: 864px;
+    margin: 0 auto;
+    height: 150px;
+    /*background-color: pink;*/
+}
+.filter-box {
+    position: relative;
+    width: 108px;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    margin-right: -4px;
+    /*background-color: teal;*/
+    /*box-sizing: border-box;
+    border: 1px solid #000;*/
+}
+.filter-button {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    margin: 0 24px;
+    padding: 0;
+    background-color: #fff;
+    border: 2px outset #ddd;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+}
+button:focus, .filter-button:focus {
+    outline: none;
+}
+.filter-button:hover {
+    border-top: 3px solid #ddd;
+    border-left: 3px solid #ddd;
+    border-right: 3px solid #999;
+    border-bottom: 3px solid #999;
+    left: -1px;
+    top: -1px;
+}
+.btn-active, .filter-button:active {
+    border-top: 3px solid #999;
+    border-left: 3px solid #999;
+    border-right: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    box-shadow: 0px -1px -1px rgba(0,0,0,.5);
+    left: -1px;
+    top: -1px;
+}
+.filter-icon {
+    width: 100%;
+    height: 100%;
+}
+.filter-title {
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'TradeGothicW01-BoldCn20_675334', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
+}
+.input-box {
+    position: absolute;
+    bottom: 2%;
+    /*right: 3px;
+    margin: 0 36px; */
+    width: 26px;
+    margin: 0 41px;
+    /*height: 100%;*/
+}
+input[type=checkbox] {
+  transform: scale(1.5); 
+}
+.input:focus {
+    outline: none;
+}
+.attribute-selector {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 6px;
+	display: inline-block;
+	position: relative;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.5);
+}
+.attribute-selector:focus, .attribute-selector:hover {
+    outline: none;
+}
+.attribute-selector:active, .attribute-selector:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.attribute-selector:checked {
+	background-color: #fff;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #fff;
+}
+
+.attribute-selector:checked:after {
+	content: '\2714';
+	font-size: 16px;
+	position: absolute;
+	left: 0px;
+    top: -6px;
+	color: green;
+}
+/*.attribute-selector:after {
+	content: '\2718';
+	font-size: 16px;
+	position: absolute;
+	left: 0px;
+    top: -6px;
+	color: red;
+}*/
+.blue {
+    border: 5px solid blue;
+}
+
+
+#resultsDiv {
+    height: max-content;
+    width: 100%;
+    background-color: #faf7e4;
+}
+.chicken-div {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    min-height: 600px;
+    height: max-content;
+    background-color: transparent;
+    margin-right: -4px;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    clear: both;
+}
+.chicken-image-box {
+    position: absolute;
+    top: 0;
+    width: 64%;
+    height: 22.5%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0,0, .1);
+    margin: 0 18%;
+}
+.chicken-image {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.25);
+}
+.chicken-icon-box {
+    position: absolute;
+    left: 18%;
+    top: 22%;
+    width: 64%;
+    height: max-content;
+    margin-top: 4%;
+}
+.chicken-icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: lightgreen;
+    box-sizing: border-box;
+    margin: 0 2px 0;
+    margin-right: -2px;
+}
+.breed-title {
+    position: absolute;
+    top: 35%;
+    font-size: 17px;
+    font-weight: bold;
+    width: 76%;
+    margin: 0 12%;
+}
+.breed-description {
+    position: absolute;
+    text-align: left;
+    top: 42%;
+    width: 76%;
+    margin: 2% 12%;
+    font-family: 'Trade Gothic W01 Roman', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
+    font-size: 14px;
+}
+.breed-description > p {
+    font-family: 'Trade Gothic W01 Roman', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
+    font-size: 14px;
+}
+ul.breed-bullet-list {
+    text-align: left;
+    padding: 0 0 0 10%;
+    list-style-type: square;
+}
+li.breed-bullet {
+    padding: 2% 0;
+    margin-left: 0;
+    font-family: 'Trade Gothic W01 Roman', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
+    font-size: 14px;
+}
+
+/*img {
+    text-decoration: none; 
+    border: 0px
+}
+#imageHeader {
+    width: 932px;
+    max-width: 100%;
+}
+.img-wrapper {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}*/
+
+.img-hover {
+    border: 10px solid red;
+}

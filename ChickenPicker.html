@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chicken Picker 2017</title>
+  <link rel="stylesheet" type="text/css" href="ChickenPicker.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/1f97667d5d.js"></script>
+</head>
+
+<body>
+  <div id="pageWrapper">
+    <div id="filtersHeader">
+      <div id="filtersInstructions">This is a short paragraph describing how to use the Chick Picker. Tell us what breed characteristics are important
+        to you and we'll give you an idea of what type of chick you should get! Then, you can print out your list and take
+        it to your local Murdoch's, where a Chick Expert can help you get your chicks and the suppplies you need to care
+        for them.
+      </div>
+      <div id="filtersBox">
+        <div class="filter-box">
+          <label for="goodLayer" class="filter-button">
+            <!--<img class="filter-icon" src=""/>-->
+            </label>
+          <div class="filter-title">High Egg Production</div>
+          <div class="input-box">
+            <input id="goodLayer" class="attribute-selector" type="checkbox" value="Empty" name="" />
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <label for="brownEggs" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">Brown Eggs</div>
+          <div class="input-box">
+            <input id="brownEggs" class="attribute-selector" type="checkbox" value="Empty" name="brown-eggs-filter" />
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="whiteEggs" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">White Eggs</div>
+          <div class="input-box">
+            <input id="whiteEggs" class="attribute-selector" type="checkbox" value="Empty" name="white-eggs-filter"/>
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="multiEggs" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">Multi- colored</div>
+          <div class="input-box">
+            <input id="multiEggs" class="attribute-selector" type="checkbox" value="Empty" name="multi-eggs-filter" />
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="meatBird" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">Meat</br> Bird</div>
+          <div class="input-box">
+            <input id="meatBird" class="attribute-selector" type="checkbox" value="Empty" name="" />
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="coldHardy" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">Cold Hardy</div>
+          <div class="input-box">
+            <input id="coldHardy" class="attribute-selector" type="checkbox" value="Empty" name=""/>
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="broody" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+            </label>
+          <div class="filter-title">Broody</div>
+          <div class="input-box">
+            <input id="broody" class="attribute-selector" type="checkbox" value="Empty" name=""/>
+          </div>
+        </div>
+        <div class="filter-box">
+          <label for="docile" class="filter-button">
+            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
+          </label>
+          <div class="filter-title">Docile</div>
+          <div class="input-box">
+            <input id="docile" class="attribute-selector" type="checkbox" value="Empty" name=""/>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div id="resultsDiv">
+
+      <!--<div class="chicken-div">
+        <div class="chicken-image-box">
+          <img class="chicken-image" src="http://s7d9.scene7.com/is/image/murdochs/pearl%5Fwhite%5Fleghorn?$jpg$" />
+        </div>
+        <div class="chicken-icon-box">
+          <div class="chicken-icon">&nbsp;</div>
+          <div class="chicken-icon">&nbsp;</div>
+          <div class="chicken-icon">&nbsp;</div>
+          <div class="chicken-icon">&nbsp;</div>
+          <div class="chicken-icon">&nbsp;</div>
+        </div>
+        <div class="breed-title">Araucana/Ameraucana Mixed Breed</div>
+        <div class="breed-description">
+          <p>Very dark, rich, chestnut color that is edged in black on many of the feathers. Wing tips and the back half of
+            the tail are white giving them a very striking appearance. Will not grow as large or as fast as the bronze or
+            white turkeys, but are good to eat and a wonderful addition to the farm.</p>
+          <ul class="breed-bullet-list">
+            <li class="breed-bullet">Super heavy bird with black plumage that has a beautiful green sheen</li>
+            <li class="breed-bullet">With the straight red comb and tremendous size, it makes an unusually handsome variety for exhibition</li>
+            <li class="breed-bullet">Hens are good layers of brown eggs and especially persistent through cold weather</li>
+            <li class="breed-bullet">Super heavy bird with black plumage that has a beautiful green sheen</li>
+          </ul>
+        </div>
+      </div>-->
+
+
+
+    </div>
+  </div>
+
+  <script>
+
+
+// Filter model stores state of filters; initialize all to false
+var filters = {
+  goodLayer: false,
+  brownEggs: false,
+  whiteEggs: false,
+  multiEggs: false,
+  meatBird: false,
+  coldHardy: false,
+  broody: false,
+  docile: false
+}
+
+// Render all chickens when page loads
+// $(document).ready(function() {         
+
+// renderList(chickenList);
+
+// });
+
+
+
+$(".attribute-selector").click(function() {
+  // When an attribute selector checkbox is clicked, retrieve the selector's ID'
+   var val= $(this).attr('id');
+     // Loop through filters obj, find matching prop
+     for(var prop in filters){
+       if (prop == val){
+         console.log(prop, val);
+         console.log("they match!");
+         // Update filter model; Change bool value to its opposite
+         filters[prop] = !filters[prop];
+              // If any egg color is selected, deselect other egg colors; Update filter model values to false
+              if( val == 'brownEggs' && $('input[id="brownEggs"]').is(':checked')) {
+                filters.brownEggs = true;
+                $('input[id="whiteEggs"]').prop('checked', false);
+                filters.whiteEggs = false;
+                $('input[id="multiEggs"]').prop('checked', false);
+                filters.multiEggs = false;
+              }
+              if( val == 'whiteEggs' && $('input[id="whiteEggs"]').is(':checked')) {
+                filters.whiteEggs = true;
+                $('input[id="brownEggs"]').prop('checked', false);
+                filters.brownEggs = false;
+                $('input[id="multiEggs"]').prop('checked', false);
+                filters.multiEggs = false;
+              }
+              if( val == 'multiEggs' && $('input[id="multiEggs"]').is(':checked')) {
+                filters.multiEggs = true;
+                $('input[id="whiteEggs"]').prop('checked', false);
+                filters.whiteEggs = false;
+                $('input[id="brownEggs"]').prop('checked', false);
+                filters.brownEggs = false;
+              }
+       }
+     } 
+    console.log(filters);  
+
+    // Call filterList function
+    filterList(filters, chickenList);
+
+});
+
+renderList(chickenList);
+
+function filterList2(obj, list){
+   // Initialize new list for storing filtered chickens
+   var filteredList = [];
+   // Loop through each chicken in list and check if it passes filters object
+    $.each( list, function( i, value ){
+    console.log( "Index #" + i + ": " + value.name );
+    console.log(value.attributes);
+    
+    // Break out of loop if a chicken fails any filter
+
+    // Build a new, filtered list
+
+    // Pass filtered list to the render function 
+  });
+  
+}
+
+
+function filterList(filterModel, list){
+   // Initialize new list for storing filtered chickens
+   var filteredList = [];
+   // Loop through each chicken in list and check if it passes filters object
+    $.each( list, function( i, chicken ){
+    console.log( "Index #" + i + ": " + chicken.name );
+    console.log(chicken.attributes);
+
+      while ( i < list.length){
+        // Break out of loop if chicken fails any filter
+        if(filterModel.multiEggs === true && chicken.attributes.multiEggs === false){
+          console.log(chicken.name + " failed the multi-colored egg filter");
+          break;
+        }
+        if(filterModel.meatBird === true && chicken.attributes.meatBird === false){
+          console.log(chicken.name + " failed the meat bird filter");
+          break;
+        }
+        if(filterModel.goodLayer === true && chicken.attributes.goodLayer === false){
+          console.log(chicken.name + " failed the egg producer filter");
+          break;
+        }
+        if(filterModel.brownEggs === true && chicken.attributes.brownEggs === false){
+          console.log(chicken.name + " failed the brown egg filter");
+          break;
+        }
+        if(filterModel.whiteEggs === true && chicken.attributes.whiteEggs === false){
+          console.log(chicken.name + " failed the white egg filter");
+          break;
+        }
+        if(filterModel.coldHardy === true && chicken.attributes.coldHardy === false){
+          console.log(chicken.name + " failed the cold hardy filter");
+          break;
+        }  
+        if(filterModel.docile === true && chicken.attributes.docile === false){
+          console.log(chicken.name + " failed the docile filter");
+          break;
+        }      
+        if(filterModel.broody === true && chicken.attributes.broody === false){
+          console.log(chicken.name + " failed the broody filter");
+          break;
+        }       
+        else {
+          console.log(chicken.name + " passed all filters!");
+          // Add this chicken to filtered list
+          filteredList.push(chicken);
+          break;
+        }
+         
+      }
+
+  });
+  // Call render function; Pass filtered list
+  renderList(filteredList);
+}
+renderList(chickenList);
+
+function renderList(arr){
+      //BUILD CHICKEN DIVS FROM THE ARRAY OF CHICKENS
+    $.each(arr, function (i, chicken) {
+        
+        var name = chicken.name;
+        var img = chicken.image;
+        var txt = chicken.text;
+        var attr = chicken.attributes;
+
+        // $.each(chicken.bullets, function(j, bullet)){
+        //     var li = '<li>'+ bullet +'</li>';
+        // }
+        
+            
+        //Create the chicken div
+ var chickenDiv = '<div class="chicken-div"><div class="chicken-image-box"><img class="chicken-image" src="'+ img +'" alt="chicken image"/></div><div class="chicken-icon-box"></div><div class="breed-title">'+ name +'</div><div class="breed-description"><p>'+ txt +'</p><ul class="breed-bullet-list"></ul></div></div>'
+
+    
+
+
+
+        $(chickenDiv).appendTo('#resultsDiv');
+        
+        
+    });
+}
+
+function buildBullets() {
+        for (var j = 0; j < chicken.bullets.length; j++) {
+           //Create line item
+           var bullet = document.createElement('li');
+           //Set text
+           document.createTextNode( chicken.bullets[j] );
+           //Add to bullet list
+           bulletList.appendChild(bullet);
+        }
+}
+</script>
+
+</body>
