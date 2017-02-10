@@ -6,124 +6,103 @@
   <link rel="stylesheet" type="text/css" href="ChickenPicker.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://use.fontawesome.com/1f97667d5d.js"></script>
+  <script src="ChickenList.js"></script>
 </head>
 
 <body>
-  <div id="pageWrapper">
+  <div id="pageWrapper"><img id="imageHeader" src="http://s7d9.scene7.com/is/image/murdochs/2017%2DBreedRecommender%2DHeader%2D930x250?$jpg$&amp;scl=1"
+      alt="Chicken Picker Banner" />
     <div id="filtersHeader">
-      <div id="filtersInstructions">This is a short paragraph describing how to use the Chick Picker. Tell us what breed characteristics are important
-        to you and we'll give you an idea of what type of chick you should get! Then, you can print out your list and take
-        it to your local Murdoch's, where a Chick Expert can help you get your chicks and the suppplies you need to care
-        for them.
-      </div>
+      <div id="filtersInstructions">Tell us what breed characteristics are important to you and we'll give you an idea of what type of chick you should
+        get!
+        <strong>Add or remove filters simply by clicking on the icons.</strong> Then, you can <span id="printText">print out your list</span> and take
+        it to your local Murdoch's. There a Chick Expert will help you select your chicks and the supplies you need to care
+        for your new flock.</div>
       <div id="filtersBox">
-        <div class="filter-box">
-          <label for="goodLayer" class="filter-button">
-            <!--<img class="filter-icon" src=""/>-->
-            </label>
+        <div class="filter-box"><label for="goodLayer" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FEggLayer%5FIcon?$jpg$" /> </label>
           <div class="filter-title">High Egg Production</div>
-          <div class="input-box">
-            <input id="goodLayer" class="attribute-selector" type="checkbox" value="Empty" name="" />
-          </div>
+          <div class="input-box"><input id="goodLayer" class="attribute-selector" type="checkbox" value="Empty" /></div>
         </div>
-
-        <div class="filter-box">
-          <label for="brownEggs" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
-          <div class="filter-title">Brown Eggs</div>
-          <div class="input-box">
-            <input id="brownEggs" class="attribute-selector" type="checkbox" value="Empty" name="brown-eggs-filter" />
-          </div>
+        <div class="filter-box"><label for="brownEggs" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBrownEgg%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">Brown</br>Eggs</div>
+          <div class="input-box"><input id="brownEggs" class="attribute-selector" type="checkbox" value="Empty" name="brown-eggs-filter" /></div>
         </div>
-        <div class="filter-box">
-          <label for="whiteEggs" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
-          <div class="filter-title">White Eggs</div>
-          <div class="input-box">
-            <input id="whiteEggs" class="attribute-selector" type="checkbox" value="Empty" name="white-eggs-filter"/>
-          </div>
+        <div class="filter-box"><label for="whiteEggs" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FWhiteEgg%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">White</br>Eggs</div>
+          <div class="input-box"><input id="whiteEggs" class="attribute-selector" type="checkbox" value="Empty" name="white-eggs-filter" /></div>
         </div>
-        <div class="filter-box">
-          <label for="multiEggs" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
-          <div class="filter-title">Multi- colored</div>
-          <div class="input-box">
-            <input id="multiEggs" class="attribute-selector" type="checkbox" value="Empty" name="multi-eggs-filter" />
-          </div>
+        <div class="filter-box"><label for="multiEggs" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMultiColorEgg%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">Multi-colored Eggs</div>
+          <div class="input-box"><input id="multiEggs" class="attribute-selector" type="checkbox" value="Empty" name="multi-eggs-filter" /></div>
         </div>
-        <div class="filter-box">
-          <label for="meatBird" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
-          <div class="filter-title">Meat</br> Bird</div>
-          <div class="input-box">
-            <input id="meatBird" class="attribute-selector" type="checkbox" value="Empty" name="" />
-          </div>
+        <div class="filter-box"><label for="meatBird" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMeatBird%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">Meat</br>Bird</div>
+          <div class="input-box"><input id="meatBird" class="attribute-selector" type="checkbox" value="Empty" /></div>
         </div>
-        <div class="filter-box">
-          <label for="coldHardy" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
-          <div class="filter-title">Cold Hardy</div>
-          <div class="input-box">
-            <input id="coldHardy" class="attribute-selector" type="checkbox" value="Empty" name=""/>
-          </div>
+        <div class="filter-box"><label for="coldHardy" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FColdHardy%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">Cold</br>Hardy</div>
+          <div class="input-box"><input id="coldHardy" class="attribute-selector" type="checkbox" value="Empty" /></div>
         </div>
-        <div class="filter-box">
-          <label for="broody" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-            </label>
+        <div class="filter-box"><label for="broody" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBroody%5FIcon?$jpg$" /> </label>
           <div class="filter-title">Broody</div>
-          <div class="input-box">
-            <input id="broody" class="attribute-selector" type="checkbox" value="Empty" name=""/>
-          </div>
+          <div class="input-box"><input id="broody" class="attribute-selector" type="checkbox" value="Empty" /></div>
         </div>
-        <div class="filter-box">
-          <label for="docile" class="filter-button">
-            <img class="filter-icon" src="165_52_EgyptionFayoumis_Pullet.jpg"/>
-          </label>
+        <div class="filter-box"><label for="docile" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FDocile%5FIcon?$jpg$" /> </label>
           <div class="filter-title">Docile</div>
-          <div class="input-box">
-            <input id="docile" class="attribute-selector" type="checkbox" value="Empty" name=""/>
-          </div>
+          <div class="input-box"><input id="docile" class="attribute-selector" type="checkbox" value="Empty" /></div>
         </div>
-
+        <div class="filter-box"><label for="topPick" class="filter-button"> <img class="filter-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FFave%5FIcon?$jpg$" /> </label>
+          <div class="filter-title">Murdoch's</br>Top Picks</div>
+          <div class="input-box"><input id="topPick" class="attribute-selector" type="checkbox" value="Empty" /></div>
+        </div>
       </div>
+    </div>
+    <div id="recommendedLists">
+      <h3 id="resultsCounter">&nbsp;</h3>
+      <h3 id="recommendText">&nbsp;</h3>
+    </div><div id="buttonBox">
+      <h4 id="printList">Print List</h4>
+      <h4 id="clearFilters">Clear Filters</h4>
+    </div>
+    <div id="printArea">
+      <title>Murdoch's Ranch & Home Supply Chick Breed Recommender: http://www.murdochs.com/go/chick-days/chick-picker/</title>
+      <img class="hide" style="margin:0 415px 2%;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$&wid=100" />
+      <div id="iconKey" style="height: 100px; position: relative;">
+        <div class="icon-key-img" style="left: 0;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FEggLayer%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">High Egg Production</div>
+        </div>
+        <div class="icon-key-img" style="left: 10%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBrownEgg%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Brown</br>Eggs</div>
+        </div>
+        <div class="icon-key-img" style="left: 20%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FWhiteEgg%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">White</br>Eggs</div>
+        </div>
+        <div class="icon-key-img" style="left: 30%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMultiColorEgg%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Multi-Colored</br>Eggs</div>
+        </div>
+        <div class="icon-key-img" style="left: 40%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMeatBird%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Meat</br>Bird</div>
+        </div>
+        <div class="icon-key-img" style="left: 50%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FColdHardy%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Cold</br>Hardy</div>
+        </div>
+        <div class="icon-key-img" style="left: 60%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBroody%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Broody</div>
+        </div>
+        <div class="icon-key-img" style="left: 70%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FDocile%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Docile</div>
+        </div>
+        <div class="icon-key-img" style="left: 80%;"><img src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FFave%5FIcon?$jpg$&wid=46&hei=46" />
+          <div class="icon-key-text">Murdoch's</br>Top Pick</div>
+        </div>
+      </div>
+      <div id="resultsDiv">&nbsp;
+      </div>
+      <img class="hide" style="margin:0 415px 2%;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$&wid=100" />
+
 
     </div>
-    <div id="resultsDiv">
 
-      <!--<div class="chicken-div">
-        <div class="chicken-image-box">
-          <img class="chicken-image" src="http://s7d9.scene7.com/is/image/murdochs/pearl%5Fwhite%5Fleghorn?$jpg$" />
-        </div>
-        <div class="chicken-icon-box">
-          <div class="chicken-icon">&nbsp;</div>
-          <div class="chicken-icon">&nbsp;</div>
-          <div class="chicken-icon">&nbsp;</div>
-          <div class="chicken-icon">&nbsp;</div>
-          <div class="chicken-icon">&nbsp;</div>
-        </div>
-        <div class="breed-title">Araucana/Ameraucana Mixed Breed</div>
-        <div class="breed-description">
-          <p>Very dark, rich, chestnut color that is edged in black on many of the feathers. Wing tips and the back half of
-            the tail are white giving them a very striking appearance. Will not grow as large or as fast as the bronze or
-            white turkeys, but are good to eat and a wonderful addition to the farm.</p>
-          <ul class="breed-bullet-list">
-            <li class="breed-bullet">Super heavy bird with black plumage that has a beautiful green sheen</li>
-            <li class="breed-bullet">With the straight red comb and tremendous size, it makes an unusually handsome variety for exhibition</li>
-            <li class="breed-bullet">Hens are good layers of brown eggs and especially persistent through cold weather</li>
-            <li class="breed-bullet">Super heavy bird with black plumage that has a beautiful green sheen</li>
-          </ul>
-        </div>
-      </div>-->
-
-
-
-    </div>
   </div>
 
   <script>
@@ -138,26 +117,78 @@ var filters = {
   meatBird: false,
   coldHardy: false,
   broody: false,
-  docile: false
+  docile: false,
+  topPick: false
 }
 
-// Render all chickens when page loads
-// $(document).ready(function() {         
 
-// renderList(chickenList);
+$(document).ready(function() {      
+  // Clear results on page load/refresh
+  $('#resultsDiv').empty();
+  // Render all chickens when page loads
+  renderList(chickenList);
+  // Display a message to the user with number of available breeds
+  $('#resultsCounter').text('Displaying ' + chickenList.length + ' breeds:');   
+  
 
-// });
+$('.icon-key-img').css({'display': 'inline-block', 'position': 'absolute', 'top': '0'});
+$('.icon-key-img > img').css({'margin': '0 27px'});
+$('.icon-key-text').css({'width': '70px','margin': '5px 15px 0', 'font-size': '12px', 'text-align': 'center'});
+
+    $('#clearFilters').click(function() {
+        clearFilters();
+        // Render full list
+        renderList(chickenList);
+        $('#resultsCounter').text('Displaying ' + chickenList.length + ' breeds:');  
+    });
+
+
+    $("#printList").click(function() {
+        printDiv('printArea');
+    });
+    $("#printText").click(function() {
+        printDiv('printArea');
+    });
+
+    $(".attribute-selector").click(function() {
+        // Clear previous results & text
+        $('#resultsDiv').empty();
+        $('#recommendText').empty(); 
+        // Retrieve the selector's ID'
+        var value= $(this).attr('id');
+        // Update the filter model based on selection 
+        updateFilterModel(value);
+    });
 
 
 
-$(".attribute-selector").click(function() {
-  // When an attribute selector checkbox is clicked, retrieve the selector's ID'
-   var val= $(this).attr('id');
-     // Loop through filters obj, find matching prop
+function clearFilters(){
+      // Clear previous results & text
+      $('#resultsDiv').empty();
+      $('#recommendText').empty();
+      $('#resultsCounter').empty();
+      // Remove all check boxes
+      $(".attribute-selector").prop('checked', false);
+      // Reset filter model values to 'false'
+      for(var prop in filters){
+        filters[prop] = false;
+      }
+}
+
+function printDiv(div){ 
+    var printContent = document.getElementById(div);
+    var WinPrint = window.open('', '', 'width=930,height=650');
+    WinPrint.document.write(printContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();
+}
+
+function updateFilterModel(val) {
+    // Loop through filters obj, find matching prop
      for(var prop in filters){
        if (prop == val){
-         console.log(prop, val);
-         console.log("they match!");
          // Update filter model; Change bool value to its opposite
          filters[prop] = !filters[prop];
               // If any egg color is selected, deselect other egg colors; Update filter model values to false
@@ -184,78 +215,55 @@ $(".attribute-selector").click(function() {
               }
        }
      } 
-    console.log(filters);  
-
-    // Call filterList function
+    // Call filterList function to remove objects that don't pass selected filters
     filterList(filters, chickenList);
-
-});
-
-renderList(chickenList);
-
-function filterList2(obj, list){
-   // Initialize new list for storing filtered chickens
-   var filteredList = [];
-   // Loop through each chicken in list and check if it passes filters object
-    $.each( list, function( i, value ){
-    console.log( "Index #" + i + ": " + value.name );
-    console.log(value.attributes);
-    
-    // Break out of loop if a chicken fails any filter
-
-    // Build a new, filtered list
-
-    // Pass filtered list to the render function 
-  });
-  
 }
-
 
 function filterList(filterModel, list){
    // Initialize new list for storing filtered chickens
    var filteredList = [];
-   // Loop through each chicken in list and check if it passes filters object
+   // Loop through each chicken in list and check if it passes filters model
     $.each( list, function( i, chicken ){
-    console.log( "Index #" + i + ": " + chicken.name );
-    console.log(chicken.attributes);
-
       while ( i < list.length){
         // Break out of loop if chicken fails any filter
-        if(filterModel.multiEggs === true && chicken.attributes.multiEggs === false){
-          console.log(chicken.name + " failed the multi-colored egg filter");
+        if(filterModel.multiEggs === true && 
+        chicken.attributes.multiEggs === false){
           break;
         }
-        if(filterModel.meatBird === true && chicken.attributes.meatBird === false){
-          console.log(chicken.name + " failed the meat bird filter");
+        if(filterModel.meatBird === true && 
+        chicken.attributes.meatBird === false){
           break;
         }
-        if(filterModel.goodLayer === true && chicken.attributes.goodLayer === false){
-          console.log(chicken.name + " failed the egg producer filter");
+        if(filterModel.goodLayer === true && 
+        chicken.attributes.goodLayer === false){
           break;
         }
-        if(filterModel.brownEggs === true && chicken.attributes.brownEggs === false){
-          console.log(chicken.name + " failed the brown egg filter");
+        if(filterModel.brownEggs === true && 
+        chicken.attributes.brownEggs === false){
           break;
         }
-        if(filterModel.whiteEggs === true && chicken.attributes.whiteEggs === false){
-          console.log(chicken.name + " failed the white egg filter");
+        if(filterModel.whiteEggs === true && 
+        chicken.attributes.whiteEggs === false){
           break;
         }
-        if(filterModel.coldHardy === true && chicken.attributes.coldHardy === false){
-          console.log(chicken.name + " failed the cold hardy filter");
+        if(filterModel.coldHardy === true && 
+        chicken.attributes.coldHardy === false){
           break;
         }  
-        if(filterModel.docile === true && chicken.attributes.docile === false){
-          console.log(chicken.name + " failed the docile filter");
+        if(filterModel.docile === true && 
+        chicken.attributes.docile === false){
           break;
         }      
-        if(filterModel.broody === true && chicken.attributes.broody === false){
-          console.log(chicken.name + " failed the broody filter");
+        if(filterModel.broody === true && 
+        chicken.attributes.broody === false){
           break;
-        }       
+        } 
+        if(filterModel.topPick === true && 
+        chicken.attributes.topPickList === false){
+          break;
+        }          
         else {
-          console.log(chicken.name + " passed all filters!");
-          // Add this chicken to filtered list
+          // Add this chicken (that passed all filters) to the filtered list
           filteredList.push(chicken);
           break;
         }
@@ -263,10 +271,39 @@ function filterList(filterModel, list){
       }
 
   });
-  // Call render function; Pass filtered list
-  renderList(filteredList);
+  // If no results for selected filters
+  if(filteredList.length == 0){
+      // Call render function; Pass recommended List     
+      var topList = buildTopPickList(chickenList);
+      renderList(topList);
+      $('.top-pick-text').remove();
+      // Display message to user
+      $('#resultsCounter').text('We\'re Sorry! No results were found matching that combination of characteristics.');
+      $('#recommendText').text('Murdoch\'s highly recommends the following ' + topList.length + ' breeds: ');
+
+  } else {
+      // Call render function; Pass filtered list
+      renderList(filteredList);
+      // Display results message to user
+      $('#resultsCounter').text('Displaying ' + filteredList.length + ' result(s) based on the characteristics you selected:')
+
+  }
+
 }
-renderList(chickenList);
+
+
+function buildTopPickList(list){
+   // Initialize new list for storing top pick chickens
+   var topPickList = [];
+   // Loop through each chicken in list and add 'top pick' chickens to a new list
+    $.each( list, function( i, chicken ){
+      if(chicken.attributes.topPickList === true){
+        topPickList.push(chicken)
+      }
+    });
+    return topPickList;
+  
+}
 
 function renderList(arr){
       //BUILD CHICKEN DIVS FROM THE ARRAY OF CHICKENS
@@ -275,36 +312,99 @@ function renderList(arr){
         var name = chicken.name;
         var img = chicken.image;
         var txt = chicken.text;
-        var attr = chicken.attributes;
 
-        // $.each(chicken.bullets, function(j, bullet)){
-        //     var li = '<li>'+ bullet +'</li>';
-        // }
-        
-            
-        //Create the chicken div
- var chickenDiv = '<div class="chicken-div"><div class="chicken-image-box"><img class="chicken-image" src="'+ img +'" alt="chicken image"/></div><div class="chicken-icon-box"></div><div class="breed-title">'+ name +'</div><div class="breed-description"><p>'+ txt +'</p><ul class="breed-bullet-list"></ul></div></div>'
+        if(chicken.attributes.topPickList === true){
+          // Inline CSS styles below only apply to printed page; they are overridden by the CSS stylesheet
+          var topPick = '<img class="murdochs-top-pick" style="display: none;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$" />';
+          topPick += '<div class="top-pick-text" style="display:none;">A Murdoch&rsquo;s Top Pick!</div>';
+        } else {
+          var topPick = '';
+        }
+        // Call function to build bulleted list; store result in variable    
+        var bulletList = buildBullets(chicken.bullets);
+        // Call function to build icon box div; store result in variable    
+        var icons = buildIconBox(chicken.attributes);
 
-    
+        // For every chicken in list, create a div
+        // Note: Inline styles below are necessary for PRINT VIEW ONLY; Removing them will cause print formatting problems; These styles are either redundant to/overridden by the CSS stylesheet
+        var chickenDiv = '<div class="chicken-div"><div class="chicken-image-box" style="float: left; clear: both;" >'+ topPick +'<img class="chicken-image" style="width: 172px;height: 130px;" src="'+ img +'" alt="chicken image"/>'+ icons +'</div><h4 class="breed-title" style="float:left;margin:0;padding-left:18px;">'+ name +'</h4><div class="breed-description" style="width: 70%; float:right;font-size: 11px; border-bottom: 1px solid black"><p>'+ txt +'</p>'+ bulletList +'</div></div>';
 
-
-
+        // Append to results display div
         $(chickenDiv).appendTo('#resultsDiv');
-        
         
     });
 }
 
-function buildBullets() {
-        for (var j = 0; j < chicken.bullets.length; j++) {
-           //Create line item
-           var bullet = document.createElement('li');
-           //Set text
-           document.createTextNode( chicken.bullets[j] );
-           //Add to bullet list
-           bulletList.appendChild(bullet);
+function buildBullets(list){
+        
+        var chickenBullets = '<ul class="breed-bullet-list">'
+
+        for (var j = 0; j < list.length; j++){
+          // Create line item
+          var li = '<li class="breed-bullet">'+ list[j] +'</li>';
+          // Add line to bullet list
+          chickenBullets += li;
         }
+        // Add closing tag to bullet list
+        chickenBullets += '</ul>';
+
+        return chickenBullets;
 }
+
+function buildIconBox(obj){
+        // Store icon images in variables
+        var cold = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FColdHardy%5FIcon?$jpg$&wid=26&hei=26" alt="cold-hardy-icon" />';
+        var doc = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FDocile%5FIcon?$jpg$&wid=26&hei=26" alt="docile-icon" />';
+        var brn = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBrownEgg%5FIcon?$jpg$&wid=26&hei=26" alt="brown-egg-icon" />';
+        var wht = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FWhiteEgg%5FIcon?$jpg$&wid=26&hei=26" alt="white-egg-icon" />';
+        var multi = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMultiColorEgg%5FIcon?$jpg$&wid=26&hei=26" alt="multi-colored-egg-icon" />';
+        var brood = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FBroody%5FIcon?$jpg$&wid=26&hei=26" alt="broody-icon" />';
+        var meat = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FMeatBird%5FIcon?$jpg$&wid=26&hei=26" alt="meat-bird-icon" />';
+        var layer = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FEggLayer%5FIcon?$jpg$&wid=26&hei=26" alt="egg-layer-icon" />';
+        var top = '<img class="chicken-icon" src="http://s7d9.scene7.com/is/image/murdochs/CBR%5FFave%5FIcon?$jpg$&wid=26&hei=26" alt="top-pick-icon" />';
+        // Create an icon box for holding icon divs
+        var iconBox = '<div class="chicken-icon-box" style="border-bottom: 20px solid white;">'
+        // Loop through the values for each attribute
+        for(var key in obj){
+            var value = obj[key];
+            var iconDiv = '<div class="chicken-icon-div" style="display: inline-block">';
+          // Check if attribute is true, and build a div displaying relevant icon
+          if ( key == 'goodLayer' && value === true){
+            iconBox += iconDiv + layer +'</div>';
+          }
+          if ( key == 'brownEggs' && value === true){
+            iconBox += iconDiv + brn +'</div>';
+          }
+          if ( key == 'whiteEggs' && value === true){
+            iconBox += iconDiv + wht +'</div>';
+          }
+          if ( key == 'multiEggs' && value === true){
+            iconBox += iconDiv + multi +'</div>';
+          }
+          if ( key == 'meatBird' && value === true){
+            iconBox += iconDiv + meat +'</div>';
+          }
+          if ( key == 'coldHardy' && value === true){
+            iconBox += iconDiv + cold +'</div>';
+          }
+          if ( key == 'docile' && value === true){
+            iconBox += iconDiv + doc +'</div>';
+          }
+          if ( key == 'broody' && value === true){
+            iconBox += iconDiv + brood +'</div>';
+          }
+          if ( key == 'topPickList' && value === true){
+            iconBox += iconDiv + top +'</div>';
+          }
+          
+        }
+      // Add closing tag to icon box  
+      iconBox += '</div>';
+
+      return iconBox;
+}
+
+});
 </script>
 
 </body>
