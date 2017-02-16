@@ -61,8 +61,9 @@
       <h3 id="resultsCounter">&nbsp;</h3>
       <h3 id="recommendText">&nbsp;</h3>
     </div><div id="buttonBox">
-      <h4 id="printList">Print List</h4>
+      <h4 class="print-list">Print List</h4>
       <h4 id="clearFilters">Clear Filters</h4>
+      <a id="pintPin" data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=http://www.murdochs.com/go/chick-days/chick-picker/&media=http://s7d9.scene7.com/is/image/murdochs/2017%2DChickDays%2DBreed%2DRecommender%2DSquare%2Dv2?$jpg$&amp;scl=1&description=Murdochs%20Chick%20Breed%20Recommender" data-pin-height="28"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a>
     </div>
     <div id="printArea">
       <title>Murdoch's Ranch & Home Supply Chick Breed Recommender: http://www.murdochs.com/go/chick-days/chick-picker/</title>
@@ -98,11 +99,8 @@
       </div>
       <div id="resultsDiv">&nbsp;
       </div>
-      <img class="hide" style="margin:0 415px 2%;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$&wid=100" />
-
-
+      <div id="btmPrintButton"><h4 class="print-list bottom-btn" style="display: none;">Print List</h4></div>
     </div>
-
   </div>
 
   <script>
@@ -143,12 +141,10 @@ $('.icon-key-text').css({'width': '70px','margin': '5px 15px 0', 'font-size': '1
     });
 
 
-    $("#printList").click(function() {
+    $(".print-list").click(function() {
         printDiv('printArea');
     });
-    $("#printText").click(function() {
-        printDiv('printArea');
-    });
+
 
     $(".attribute-selector").click(function() {
         // Clear previous results & text
@@ -315,8 +311,8 @@ function renderList(arr){
 
         if(chicken.attributes.topPickList === true){
           // Inline CSS styles below only apply to printed page; they are overridden by the CSS stylesheet
-          var topPick = '<img class="murdochs-top-pick" style="display: none;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$" />';
-          topPick += '<div class="top-pick-text" style="display:none;">A Murdoch&rsquo;s Top Pick!</div>';
+          // var topPick = '<img class="murdochs-top-pick" style="display: none;" src="http://s7d9.scene7.com/is/image/murdochs/MUR%5F3CLogo?$png$" />';
+          var topPick = '<div class="top-pick-text" style="display:none;"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;A Murdoch&rsquo;s Top Pick!&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true"></i></div>';
         } else {
           var topPick = '';
         }

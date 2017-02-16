@@ -62,7 +62,7 @@
 }
 #recommendText {
     position: absolute;
-    bottom: -30%;
+    top: 90%;
     margin-left: 4.5%;
     color: #473F0E;
 }
@@ -97,7 +97,19 @@
     width: 30%;
     height: 70px;
 }
-#printList, #clearFilters {
+#pintPin {
+    color: #99370e;
+    position: absolute;
+    left: -10%;
+    top: 30%;
+} 
+#btmPrintButton {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.print-list, #clearFilters {
     z-index: 1;
     color: #fff;
     position: absolute;
@@ -113,18 +125,29 @@
     border: 2px solid #99370e;
     border-radius: 3px;
 }
-#printList {
+.print-list {
     right: 160px;
     padding: 3% 0;
+}
+.bottom-btn {
+    display: block !important;
+    position: static;
+    padding: 1% 0;
+    margin: 0 auto;
+    vertical-align: bottom;
 }
 #clearFilters {
     right: 50px;
     /*padding: .18% 0;*/
 }
-#printList:hover, #clearFilters:hover {
+.print-list:hover, #clearFilters:hover {
     cursor: pointer;
     background-color: #c84812;
     border-color: #c84812;
+}
+#pintPin:hover {
+    color: #c84812;
+    transform: scale(1.05, 1.05);
 }
 button:focus, .filter-button:focus {
     outline: none;
@@ -254,11 +277,14 @@ input[type=checkbox] {
 .top-pick-text {
     display: block !important;
     position: absolute;
-    top: -20px;
-    width: 147px;
+    top: 0;
+    width: 172px;
     text-transform: uppercase;
+    text-align: center;
     font-family: 'TradeGothicW01-BoldCn20_675334', 'Arial Narrow', Tahoma, Geneva, Arial, Sans-Serif;
-    font-size: 14px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #99370e;
 }
 .chicken-image {
     width: 100%;
@@ -326,24 +352,56 @@ li.breed-bullet {
     .breed-title {
         top: 30%;
     }
+    #filtersBox {
+        width: 100%;
+        margin-bottom: 170px;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .chicken-div {
         width: 49%;
     }
-    /*li.breed-bullet {
-        display: none;
-    }*/
-    /*.chicken-icon-box {
-        top: 35%;
-    }
-    .breed-title {
-        top: 50%;
-    }
-    .breed-description > p {
-        margin-top: 50%;
-    }*/
+}
+@media screen and (max-width: 570px) {
+#buttonBox {
+    position: relative;
+    top: -30px;
+    width: 70%;
+    margin: 0 15%;
+    height: 100px;
+}
+#messageArea {
+    height: 30px;
+}
+#resultsCounter {
+    font-size: 15px;
+    top: 0;
+}
+#recommendText {
+    font-size: 13px;
+    top: 180%;
+}
+#resultsDiv {
+    margin-top: 60px;
+}
+.filter-title {
+    top: 38%;
+    font-size: 13px;
+    margin: 0 18%;
+}
+
+.filter-button {
+    width: 50px;
+    height: 50px;
+    margin: 0 18px;
+}
+
+.filter-box {
+    margin-right: 0;
+    width: 58px;
+}
+
 }
 
 @media screen and (max-width: 350px) {
